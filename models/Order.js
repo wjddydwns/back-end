@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const Schema  = mongoose.Schema
 
 const orderSchema  = Schema({
-    userId: { type: mongoose.ObjectId, ref: User,required: true },
+    userId: { type: mongoose.ObjectId, ref: 'User',required: true },
     status: { type: String, default: "preparing" },
     totalPrice: { type: Number, required: true, default: 0 },
     shipTo: { type: Object, required: true },
@@ -12,7 +12,7 @@ const orderSchema  = Schema({
     orderNum: { type: String },
     items: [
       {
-        productId: { type: mongoose.ObjectId, ref: Product,required: true },
+        productId: { type: mongoose.ObjectId, ref: 'Product',required: true },
         price: { type: Number, required: true },
         qty: { type: Number, required: true, default: 1 },
         size: { type: String, required: true },
