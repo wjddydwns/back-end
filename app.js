@@ -16,7 +16,7 @@ mongoose.connect(MONGO_URI,{useNewUrlParser : true})
 .then(()=>console.log("mogoose connected"))
 .catch((err)=>console.log("mongoose connected fail",err))
 
-app.listen(process.env.PORT || 5001,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("server on 5001")
 })
 
