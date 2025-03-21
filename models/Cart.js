@@ -2,7 +2,7 @@
 //cart.js
 
 const mongoose = require('mongoose')
-const User = require('./user')
+const User = require('./User')
 const Product = require('./Product')
 const Schema  = mongoose.Schema
 
