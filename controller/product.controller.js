@@ -58,16 +58,34 @@ productController.createProduct = async (req, res) => {
     }
 };
 
-productController.getProductById = async (req, res) => {
-    try {
-      const productId = req.params.id;
-      const product = await Product.findById(productId);
-      if (!product) throw new Error("No item found");
-      res.status(200).json({ status: "success", data: product });
-    } catch (error) {
-      return res.status(400).json({ status: "fail", error: error.message });
+// productController.getProductById = async (req, res) => {
+//     try {
+//       const productId = req.params.id;
+//       const product = await Product.findById(productId);
+//       if (!product) throw new Error("No item found");
+//       res.status(200).json({ status: "success", data: product });
+//     } catch (error) {
+//       return res.status(400).json({ status: "fail", error: error.message });
+//     }
+//   };
+
+productController.updateProduct = async(req,res)=>{
+    try{
+        const productId = req.params.id
+        const { sku, name, image, category, description, price, stock, status } = req.body;    
+        const product = await Product.findByIdAndUpdate(
+            {_id :productId},
+            {sku, name, image, category, description, price, stock, status },
+            {new:true})
+        if(!product){
+            throw new Error ("수정할 아이템이 없습니다.")
+        }
+        res.status(200).json({status:"수정 성공",data:product})
     }
-  };
+    catch(error){
+        res.status(200).json({status:"fail",error:error.message})
+    }
+}
 
 productController.checkStock =async(item)=>{
     // 내가 사려는 아이템 재고 정보 들고오기

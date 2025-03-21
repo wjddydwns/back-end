@@ -12,4 +12,8 @@ router.get("/products", productController.getAllProducts);
 // ✅ 특정 상품 조회 (ID 사용)
 router.get("/:id", productController.getProduct);
 
+// router.get("/edit/:id",authController.authenticate, productController.editProduct)
+
+router.put("/:id",authController.authenticate,productController.updateProduct)
+
 module.exports = router;
