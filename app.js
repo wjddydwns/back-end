@@ -12,7 +12,7 @@ app.use(bodyParser.json()) // req.body
 app.use("/api",indexRouter)
 
 const mongoURI  = process.env.LOCAL_DB_ADDRESS
-mongoose.connect(mongoURI,{useNewURLparser : true})
+mongoose.connect(mongoURI,{useNewUrlParser : true})
 .then(()=>console.log("mogoose connected"))
 .catch((err)=>console.log("mongoose connected fail",err))
 
