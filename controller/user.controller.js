@@ -1,4 +1,4 @@
-const User = require("../models/user")
+const User = require("../models/User")
 //비밀번호 암호화 라이브러리
 const bcrypt =require("bcryptjs")
 
