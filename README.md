@@ -5,6 +5,14 @@ Express.js로 구축된 백엔드 서버입니다. 프론트엔드(👉 front-en
 **데이터베이스 설계**
 ![image](https://github.com/user-attachments/assets/28c58291-0bf1-4c76-ad94-569b6f739007)
 
+**POSTMAN**
+![image](https://github.com/user-attachments/assets/c3d5fc14-fec1-4fb7-9127-77d08c498617)
+![image](https://github.com/user-attachments/assets/029b5624-07ef-47ce-9e20-af2155bf9d97)
+![image](https://github.com/user-attachments/assets/5e15f65e-108a-4302-86c7-34f436b0804e)
+
+**MongoDB**
+![image](https://github.com/user-attachments/assets/cf6c1b60-145b-486f-99d3-875507979a68)
+
 🛠 기술 스택
 
 기술	설명
