@@ -41,3 +41,6 @@ sequenceDiagram
   API->>DB: 사용자 정보 조회
   DB-->>API: 사용자 존재, 해시된 비밀번호
   API-->>Client: JWT 토큰 발급
+###  배포
+![image](https://github.com/user-attachments/assets/7f2f2bcd-aac8-44c4-868f-00b22f1154a5)
+
